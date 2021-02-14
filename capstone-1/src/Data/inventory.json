@@ -76,7 +76,7 @@
         "serialNumber": "10",
         "price": 7.13,
         "category": "flower",
-        "quantity": 0,
+        "quantity": 3,
         "productImage": "../Assets/ageratum_houstoanianum.jpg"
     }
 ]

@@ -5,8 +5,12 @@ import { Link } from 'react-router-dom';
 import SearchIcon from "@material-ui/icons/Search";
 // import EcoIcon from '@material-ui/icons/Eco';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import { useStateValue } from './StateProvider';
 
 function NavBar() {
+    
+    const [{ cart }] = useStateValue();
+    
     return (
         <nav className="navbar">
             {/* Logo */}
@@ -58,7 +62,7 @@ function NavBar() {
                 <Link to="/checkout" className="navbar-link">
                     <div className="navbar-optionCart">
                         <ShoppingCartIcon/>
-                        <span className="navbar-optionLineTwo navbar-cartCount">0</span>
+                        <span className="navbar-optionLineTwo navbar-cartCount">{cart?.length}</span>
                     </div>
                 </Link>
         </nav>

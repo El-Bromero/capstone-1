@@ -1,16 +1,11 @@
 export const initialState = {
-    cart: [
-        {
-            id: "1234",
-            title: "Daisy",
-            image: "https://images.unsplash.com/photo-1458596376782-d1c25e7da40e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1041&q=80",
-            category: "flower",
-            quantity: 4,
-            price: 2.99,
-        }
-    ],
+    cart: [],
     user: null,
 };
+
+export const getCartTotal = (cart) => 
+    cart?.reduce((amount, item) => item.price + amount, 0);
+
 
 function reducer(state, action) {
     console.log(action);

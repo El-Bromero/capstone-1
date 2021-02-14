@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import NavBar from './Components/NavBar';
 import Home from './Components/Home';
+import Checkout from './Components/Checkout';
 
 function App() {
   return (
@@ -34,7 +35,7 @@ function App() {
           <Route path ="/checkout">
             {/* <Cart/> */}
             <NavBar/>
-            <p>Checkout</p>
+            <Checkout />
           </Route>
         </Switch>
       </div>

@@ -13,9 +13,9 @@ function App() {
           <NavBar/>
         </Route>
 
-        <Route path ="/shop">
+        <Route path ="/login">
           {/* <Shop/> */}
-          <p>Shop</p>
+          <p>Login</p>
         </Route>
 
         <Route path ="/about-us">
@@ -23,9 +23,14 @@ function App() {
           <p>About Us</p>
         </Route>
 
-        <Route path ="/cart">
+        <Route path ="/orders">
+          {/* <AboutUs/> */}
+          <p>Orders</p>
+        </Route>
+
+        <Route path ="/checkout">
           {/* <Cart/> */}
-          <p>Cart</p>
+          <p>Checkout</p>
         </Route>
       </Switch>
     </div>

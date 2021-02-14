@@ -3,6 +3,7 @@ import './App.css';
 import { Route, Switch } from "react-router-dom";
 
 import NavBar from './Components/NavBar';
+import Home from './Components/Home';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
 
         <Route exact path ="/">
           <NavBar/>
+          <Home/>
         </Route>
 
         <Route path ="/login">
@@ -30,6 +32,7 @@ function App() {
 
         <Route path ="/checkout">
           {/* <Cart/> */}
+          <NavBar/>
           <p>Checkout</p>
         </Route>
       </Switch>

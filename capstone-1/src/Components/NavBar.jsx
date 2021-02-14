@@ -3,14 +3,14 @@ import './NavBar.css'
 import logo from '../Images/romeroscape_logo_crop.png';
 import { Link } from 'react-router-dom';
 import SearchIcon from "@material-ui/icons/Search";
-import EcoIcon from '@material-ui/icons/Eco';
+// import EcoIcon from '@material-ui/icons/Eco';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 function NavBar() {
     return (
         <nav className="navbar">
             {/* Logo */}
-            <Link exact path ="/">
+            <Link to ="/">
                 <img 
                     className="navbar-logo" 
                     src={logo}

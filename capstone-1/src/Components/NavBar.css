@@ -10,7 +10,7 @@
 .navbar-logo {
     width: 100px;
     object-fit: contain;
-    margin: 1rem;
+    margin: 1rem 0.5rem 0.5rem 1rem;
 }
 
 .navbar-optionCart {

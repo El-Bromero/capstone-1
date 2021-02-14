@@ -52,12 +52,12 @@ function Product({ name, serialNumber, price, category, quantity, productImage }
                             color: 'black',
                             display: 'flex',
                             flexDirection: 'column',
-                            // alignItems: 'center',
-                            // justifyContent: 'center',
                             top: '150px',
                             left: '300px',
                             right: '300px',
-                            bottom: '250px'
+                            bottom: '250px',
+                            minHeight: '200px',
+                            minWidth: '200px'
                         }
                     }
                 }

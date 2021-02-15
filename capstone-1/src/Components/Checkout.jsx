@@ -17,6 +17,7 @@ function Checkout() {
                 {cart?.length === 0 ? (
                     <div>
                         <h2>Your Shopping Cart is empty!</h2>
+                        <br/>
                         <p>
                             You currently have no items in your cart. To add an item you need to go back to the home page and click on "Add to cart" for the item(s) you need.
                         </p>
@@ -43,7 +44,6 @@ function Checkout() {
             </div>
             { cart.length > 0 && (
                 <div className="checkout-right">
-                    {/* <h1>Subtotal</h1> */}
                     <Subtotal/>
                 </div>
             )}

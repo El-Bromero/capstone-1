@@ -70,3 +70,11 @@
     padding: 0.5rem;
     height: 1.25rem !important; /* Doing !important here to override Material-Ui height to better fit icon */
 }
+
+.navbar-item-name {
+    z-index: 1000;
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}

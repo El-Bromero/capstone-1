@@ -10,6 +10,7 @@ function Product({ name, serialNumber, price, category, quantity, productImage }
     
     const [{ cart }, dispatch] = useStateValue();
     
+    // Send ADD_TO_CART action with dispatch to reducer. Adds item to cart
     const addToCart = () => {
         dispatch({
             type: 'ADD_TO_CART',
@@ -24,6 +25,7 @@ function Product({ name, serialNumber, price, category, quantity, productImage }
         })
     };
 
+    // useState for modal if open or not
     const [modalIsOpen, setModalIsOpen] = useState(false);
     
     return (
@@ -40,6 +42,7 @@ function Product({ name, serialNumber, price, category, quantity, productImage }
                 <button onClick={() => setModalIsOpen(true)}>View item details</button>
                 <button onClick={addToCart}>Add to cart</button>
             </div>
+            {/* Use Modal from library to have complete info of the product. User can exit by clicking outside of modal, by using ESC key, or by clicking on close button  */}
             <Modal 
                 isOpen={modalIsOpen} 
                 onRequestClose={() => setModalIsOpen(false)}
@@ -62,6 +65,7 @@ function Product({ name, serialNumber, price, category, quantity, productImage }
                     }
                 }
             >
+                {/* Product info that is passed to modal */}
                 <h1 className="product-modalTitle">{name}</h1>
                 <ul>
                     <li>Price: ${price}</li>

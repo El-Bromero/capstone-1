@@ -5,6 +5,7 @@ import { useStateValue } from './StateProvider';
 function CheckoutProduct({ id, title, image, category, quantity, price}) {
     const [{ cart }, dispatch] = useStateValue();
 
+    // Send REMOVE_FROM_CART action with dispatch to the reducer so that it can remove the item from cart
     const removeFromCart = () => {
         dispatch({
             type: "REMOVE_FROM_CART",
@@ -13,6 +14,7 @@ function CheckoutProduct({ id, title, image, category, quantity, price}) {
     }
 
     return (
+        // Info of the product in the checkout. Also has button that removes item from cart if clicked
         <div className="checkoutProduct">
             <img className="checkoutProduct-img" src={image} alt=""/>
 

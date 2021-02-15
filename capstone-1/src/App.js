@@ -14,18 +14,19 @@ function App() {
         <Switch>
   
           <Route exact path ="/">
+            {/* Home page path */}
             <NavBar/>
             <Home/>
           </Route>
   
           <Route path ="/about-us">
-            {/* <AboutUs/> */}
+            {/* About Us page path */}
             <NavBar/>
             <AboutUs/>
           </Route>
 
           <Route path ="/checkout">
-            {/* <Cart/> */}
+            {/* Checkout / cart page path*/}
             <NavBar/>
             <Checkout />
           </Route>

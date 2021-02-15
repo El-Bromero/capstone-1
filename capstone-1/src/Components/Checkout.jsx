@@ -13,7 +13,8 @@ function Checkout() {
         <div className="checkout">
             <div className="checkout-left">
                 <img className="checkout-img" src={leavesImage} alt="" />
-    
+
+                {/* If the cart is empty then show the info that the cart is empty else show the list of items and their info in the shopping cart */}
                 {cart?.length === 0 ? (
                     <div>
                         <h2>Your Shopping Cart is empty!</h2>
@@ -44,6 +45,7 @@ function Checkout() {
             </div>
             { cart.length > 0 && (
                 <div className="checkout-right">
+                    {/* Get subtotal of cart here. Will be moved to right side of the page */}
                     <Subtotal/>
                 </div>
             )}

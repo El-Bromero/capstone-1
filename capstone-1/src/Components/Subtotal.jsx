@@ -10,6 +10,7 @@ function Subtotal() {
     
     return (
         <div className="subtotal">
+            {/* Using CurrencyFormat to format the total price inside the cart */}
             <CurrencyFormat
                 renderText={(value) => (
                     <div>

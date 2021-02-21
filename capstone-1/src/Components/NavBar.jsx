@@ -37,6 +37,11 @@ function NavBar() {
                         setSearchTerm(event.target.value);
                     }}
                 />
+                <datalist id="names">
+                                {inventory.map((val, key) => {
+                                    return <option value={val.name}/>
+                                })}
+                            </datalist>
                 {/* FILTER RESULTS */}
                 {inventory.filter((val)=> {
                     if (searchTerm === "") {
@@ -46,11 +51,13 @@ function NavBar() {
                     }
     
                 }).map((val, key) => {
+                
                     if(searchTerm === "")
                     {
                         return;
                     }
-                    return (
+                    if(searchTerm == val.name){
+                        return (
                         <div className="navbar-item-name" key={key}>
                             <Product 
                                 name={val.name} 
@@ -61,13 +68,11 @@ function NavBar() {
                                 productImage={val.productImage}
                             />
                             {/* <button>{val.name}</button> */}
-                            <datalist id="names">
-                                {inventory.map((val, key) => {
-                                    return <option value={val.name}/>
-                                })}
-                            </datalist>
+                            
                         </div>
                     )
+                    }
+                    
                 })
                 }
                 <SearchIcon className="navbar-searchIcon"/>
